@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gaumit Kauts — Portfolio</title>
+  <meta name="description" content="Portfolio website of Gaumit Kauts: projects, experience, and contact." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Styles (external) -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- ========== Header / Navigation ========== -->
+  <header>
+    <div class="container nav">
+      <!-- Brand -->
+      <a href="#home" class="brand" aria-label="Go to top">
+        <span class="logo" aria-hidden="true">
+          <!-- Fixed path (previous had a double minus that could break rendering) -->
+          <svg viewBox="0 0 24 24" role="img" aria-label="Logo">
+            <path d="M12 2l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.9l1.1-6.5L2.6 8.8l6.5-.9L12 2z"/>
+          </svg>
+        </span>
+        <span>Gaumit Kauts</span>
+      </a>
+
+      <!-- Primary nav -->
+      <nav class="links" aria-label="Primary">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Connect with me</a>
+        <a class="btn" href="#" id="resumeBtn">Download Resume</a>
+        <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">🌗</button>
+      </nav>
+
+      <!-- Mobile menu trigger (hidden on desktop) -->
+      <button class="btn menu-btn" id="openMenu" aria-controls="drawer" aria-expanded="false" style="display:none">Menu ☰</button>
+    </div>
+  </header>
+
+  <!-- ========== Mobile Drawer (off-canvas) ========== -->
+  <aside id="drawer" class="hidden" aria-hidden="true" aria-label="Mobile navigation">
+    <div class="drawer-head">
+      <strong>Navigate</strong>
+      <button class="theme-toggle" id="closeMenu" aria-label="Close">✕</button>
+    </div>
+    <nav class="drawer-links">
+      <a class="btn" href="#projects">Projects</a>
+      <a class="btn" href="#skills">Skills</a>
+      <a class="btn" href="#experience">Experience</a>
+      <a class="btn" href="#contact">Contact</a>
+      <a class="btn" href="#" id="resumeBtnMobile">Download Resume</a>
+    </nav>
+  </aside>
+
+  <!-- ========== Main Content ========== -->
+  <main id="home">
+    <!-- ===== Hero ===== -->
+    <section class="container hero">
+      <div>
+
+        <p class="tag">👋 Hi, I'm Gaumit Kauts</p>
+        <h1 class="reveal">I design & build innovative solutions.</h1>
+        <p class="lead reveal" style="transition-delay:.08s">
+          I’m a Software Engineering student with a passion for building scalable systems, intelligent applications, and user-friendly products.
+          My journey spans backend development, data engineering, wireless networks, and machine learning,giving me the ability to approach problems from multiple angles.
+        </p>
+
+        <!-- Quick badges -->
+        <div class="chips reveal" style="margin-top:18px; transition-delay:.12s">
+          <span class="chip">Open to New Grad roles</span>
+          <!-- <a class="chip" href="#projects">See my work ↓</a> -->
+        </div>
+
+        <!-- Primary CTAs -->
+      </div>
+
+      <div>
+        <div class="hero-card reveal" style="transition-delay:.14s">
+          <div class="hero-badges">
+            <div class="card">
+              <img src="profile_pic-min.png">
+            </div>
+            <!-- <div class="pill">Based in: Canada</div> -->
+          </div>
+          <!-- Optional: add stats back later -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section id="experience" class="container">
+      <div class="sec-head"><h2>Experience</h2></div>
+
+      <div class="timeline">
+        <!-- Item 1 -->
+        <article class="t-item reveal">
+          <div class="t-role">Wireless System Engineer Co-op <span class="t-org">— Teck Resources</span></div>
+          <div class="meta">May 2024 – Aug 2024 · Calgary, AB</div>
+          <ul>
+            <li>Built Python regression tests for LTE user equipment and automated reporting with Selenium &amp; SQL.</li>
+            <li>Built Power BI dashboards with custom KPIs for LTE connectivity and coverage, enhancing operational efficiency
+by 20% across two sites.</li>
+            <li>Engineered a Selenium, Python, and SQL-based solution to automate critical alarm reporting, cutting network
+anomaly response time by 30%.</li>
+            <li>Streamlined data processing by parsing large XML files using Python, transforming complex data into structured,
+accessible formats, and improving data handling efficiency.</li>
+          </ul>
+        </article>
+
+        <!-- Item 2 -->
+        <article class="t-item reveal" style="transition-delay:.06s">
+          <div class="t-role">Backend Developer Intern <span class="t-org">— GRITVERSE Technologies</span></div>
+          <div class="meta">May 2022 – Aug 2022 · Remote</div>
+          <ul>
+            <li>Developed scalable backend with Java Spring &amp; Hibernate; optimized SQL performance.</li>
+            <li>Enhanced backend performance for the ALEF Developer Community Project by introducing new features and
+optimizing code in PHP and SQL.</li>
+            <li>Improved system performance by implementing efficient database management techniques, reducing query response
+times.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects" class="container">
+      <div class="sec-head">
+        <h2>Featured Projects</h2>
+        <!-- <span class="subtitle">A selection of things I'm proud of</span> -->
+      </div>
+      <div class="grid" id="projectGrid">
+        <!-- Cards injected by script_portfolio.js -->
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section id="skills" class="container">
+      <div class="sec-head"><h2>Skills &amp; Tools</h2></div>
+
+      <div class="row">
+        <div>
+          <h3>Core</h3>
+          <div class="chips">
+            <span class="chip">JavaScript</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">Python</span>
+            <span class="chip">Java</span>
+            <span class="chip">C++</span>
+            <span class="chip">SQL</span>
+          </div>
+
+          <h3 style="margin-top:16px">Frameworks</h3>
+          <div class="chips">
+            <span class="chip">React</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">Django</span>
+            <span class="chip">Express</span>
+            <span class="chip">Tailwind</span>
+          </div>
+        </div>
+
+        <div>
+          <h3>Cloud &amp; DevOps</h3>
+          <div class="chips">
+            <span class="chip">AWS</span>
+            <span class="chip">Azure</span>
+            <span class="chip">Docker</span>
+            <span class="chip">CI/CD</span>
+            <span class="chip">Power BI</span>
+          </div>
+
+          <h3 style="margin-top:16px">Other</h3>
+          <div class="chips">
+            <span class="chip">Data Engineering</span>
+            <span class="chip">ML (PyTorch/TensorFlow)</span>
+            <span class="chip">Selenium</span>
+            <span class="chip">MATLAB</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== Certifications ===== -->
+    <section id="certifications" class="container">
+      <div class="sec-head"><h2>Certifications</h2></div>
+      <div class="cert_grid" id="certification_grid">
+        <!-- Cards can be injected later if needed -->
+      </div>
+    </section>
+    
+    <!-- ===== Contact / Connect ===== -->
+    <section id="contact" class="container" style="display:block; text-align:center; justify-items:center;">
+      <div class="sec-head" ><h2>Connect With Me</h2></div>
+      <a class="chip_contact" href="https://github.com/Gaumit-Kauts" aria-label="GitHub" style="color:#a3b0c2;">GitHub</a>
+      <a class="chip_contact" href="https://www.linkedin.com/in/gaumit-kauts-947312235?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2FUg9AT8GQDabrwDU0VAo8A%3D%3D" aria-label="LinkedIn" style="color:#a3b0c2;">LinkedIn</a>
+      <a class="chip_contact" href="mailto:kautsgaumit321@gmail.com"style="color:#a3b0c2;">Email</a>     
+    </section>
+  </main>
+
+  <!-- ========== Footer ========== -->
+  <footer>
+    © <span id="year"></span> Gaumit Kauts • Built with vanilla HTML/CSS/JS
+    <div style="margin-top:10px">
+      <a href="#home" class="pill"><span>Back to top ↑</span></a>
+    </div>
+  </footer>
+
+  <!-- Scripts (external). Keep your JS here -->
+  <script src="script_portfolio.js"></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+/* ===============================
+   Global CSS variables (themes)
+   =============================== */
+:root {
+  --bg: #0b0d10;
+  --surface: #12161b;
+  --muted: #a3b0c2;
+  --text: #e6edf6;
+  --accent: hsl(180, 69%, 49%);
+  --accent-2: #00d4ff;
+  --ring: rgba(7, 2, 25, 0.45);
+  --card: #0e1217;
+  --shadow: 0 10px 30px rgba(14, 14, 14, 0.35);
+  --radius: 18px;
+}
+
+/* Light theme (toggle by adding .light to :root) */
+/* Light theme tokens */
+:root.light{
+--bg: #f7f9fc;
+--surface: #fefefe;
+--muted: #01050b;
+--text: #0f172a;
+--accent: #120551;
+--accent-2: #09272d;
+--ring: rgba(91,61,245,.28);
+--card: #ffffff;
+--shadow: 0 12px 28px rgba(15, 23, 42, .08);
+}
+/* ===============================
+   Resets / Base
+   =============================== */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(124,92,255,.15), transparent 60%),
+    radial-gradient(1000px 500px at 120% -20%, rgba(0,212,255,.14), transparent 55%),
+    var(--bg);
+  color: var(--text);
+}
+
+/* ===============================
+   Layout
+   =============================== */
+.container { width: min(1100px, 92%); margin-inline: auto; }
+
+header {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: saturate(1.2) blur(8px);
+  background: color-mix(in oklab, var(--bg) 75%, transparent);
+  border-bottom: 1px solid color-mix(in oklab, var(--muted) 20%, transparent);
+}
+
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: .3px; }
+.brand .logo {
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: var(--shadow);
+}
+.brand .logo svg { width: 22px; height: 22px; fill: #fff; }
+
+/* Navigation */
+.nav a { color: var(--text); text-decoration: none; font-weight: 600; opacity: .86; }
+.links { display: flex; gap: 22px; align-items: center; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 10px 14px; border-radius: 12px;
+  border: 1px solid color-mix(in oklab, var(--muted) 25%, transparent);
+  background: linear-gradient(180deg, color-mix(in oklab, var(--surface) 88%, transparent), color-mix(in oklab, var(--surface) 96%, transparent));
+  box-shadow: var(--shadow);
+  color: var(--text); font-weight: 700;
+  text-decoration: none;
+  transition: transform .2s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+
+.theme-toggle {
+  cursor: pointer; border: none; background: transparent; color: var(--text);
+  font-weight: 700; padding: 8px 10px; border-radius: 12px;
+}
+.theme-toggle:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+
+/* ===============================
+   Hero
+   =============================== */
+.hero {
+  display: grid; grid-template-columns: 1.2fr .8fr; gap: 40px; padding: 70px 0 40px; align-items: center;
+}
+.tag {
+  display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--accent) 22%, transparent);
+  border: 1px solid color-mix(in oklab, var(--accent) 45%, transparent);
+  color: var(--text); font-weight: 700; font-size: 12px; letter-spacing: .3px;
+}
+h1 { font-size: clamp(36px, 6vw, 58px); line-height: 1.08; margin: 16px 0 12px; }
+.lead { font-size: clamp(16px, 2.2vw, 18.5px); color: var(--muted); max-width: 62ch; }
+
+.hero-card {
+  background: linear-gradient(180deg, color-mix(in oklab, var(--card) 92%, transparent), color-mix(in oklab, var(--card) 98%, transparent));
+  padding: 22px; border-radius: var(--radius);
+  border: 1px solid color-mix(in oklab, var(--muted) 25%, transparent);
+  box-shadow: var(--shadow);
+}
+.hero-badges { display: grid; grid-template-columns: 1fr; gap: 12px; }
+
+/* ===============================
+   Sections
+   =============================== */
+section { padding: 60px 0; }
+.sec-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 18px; }
+.sec-head h2 { font-size: clamp(24px, 3.7vw, 34px); margin: 0; }
+.subtitle { color: var(--muted); }
+
+/* ===============================
+   Skills / Chips
+   =============================== */
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.chip {
+  padding: 8px 12px; border-radius: 999px;
+  border: 1px solid color-mix(in oklab, var(--muted) 25%, transparent);
+  background: linear-gradient(180deg, color-mix(in oklab, var(--surface) 88%, transparent), color-mix(in oklab, var(--surface) 96%, transparent));
+  font-weight: 700; font-size: 13px;
+}
+
+/* ===============================
+   Projects
+   =============================== */
+.grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+.card {
+  grid-column: span 6;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--card) 92%, transparent), color-mix(in oklab, var(--card) 98%, transparent));
+  border: 1px solid color-mix(in oklab, var(--muted) 20%, transparent);
+  border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
+  display: flex; flex-direction: column;
+}
+/* .thumb { aspect-ratio: 16 / 9; background: linear-gradient(135deg, color-mix(in oklab, var(--accent) 65%, transparent), color-mix(in oklab, var(--accent-2) 55%, transparent)); } */
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;   /* stack children vertically */
+  justify-content: space-between; /* push last child down */
+  height: 100%;             /* allow stretching */
+}
+.card h3 { margin: 6px 0 6px; font-size: 20px; }
+.meta { color: var(--muted); font-size: 13px; font-weight: 600; }
+.actions {
+  display: flex;
+  justify-content: flex-start; /* keep buttons on the left */
+  margin-top: auto;            /* pushes it to the bottom */
+}
+.actions a { text-decoration: none; }
+
+/* ===============================
+   Experience Timeline
+   =============================== */
+.timeline { position: relative; margin-top: 4px; }
+.timeline::before {
+  content: ""; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px;
+  background: color-mix(in oklab, var(--muted) 25%, transparent);
+}
+.t-item { position: relative; padding-left: 34px; margin: 18px 0; }
+.t-item::before {
+  content: ""; position: absolute; left: 3px; top: 6px; width: 16px; height: 16px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--ring) 40%, transparent);
+}
+.t-role { font-weight: 800; }
+.t-org { color: var(--muted); font-weight: 700; }
+
+/* ===============================
+   Certifications
+   =============================== */
+/* thumbnail holder is same as projects */
+.thumb img{
+  width: 10%;
+  height: 10%;
+  object-fit: cover;   /* fills 16:9 nicely; change to contain for logo-like images */
+  display: block;
+}
+
+/* tiny type for issuer/date line under title */
+.cert-line{
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+/* ===============================
+   Footer
+   =============================== */
+footer { padding: 40px 0 70px; color: var(--muted); text-align: center; }
+
+/* ===============================
+   Contact / Link Chips
+   =============================== */
+
+.chip_contact {
+  padding: 8px 12px;
+  border-radius: 999px; /* pill shape */
+  border: 3px solid var(--muted);
+  background: var(--surface);
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--text);
+  transition: background-color .25s ease;
+}
+
+/* Make visited and normal look the same */
+.chip_contact:link,
+.chip_contact:visited {
+  color: var(--text);
+}
+
+/* Hover = slightly darker background */
+.chip_contact:hover {
+  background-color: color-mix(in oklab, var(--surface) 80%, rgb(6, 6, 62));
+}
+
+
+
+/* ===============================
+   Utilities
+   =============================== */
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.hidden { display: none; }
+.pill {
+  display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 999px;
+  background: color-mix(in oklab, var(--muted) 15%, transparent);
+  border: 1px solid color-mix(in oklab, var(--muted) 25%, transparent);
+  font-weight: 700; font-size: 12px;
+  color: var(--text)
+}
+.kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background: color-mix(in oklab, var(--muted) 15%, transparent);
+  padding: 2px 6px; border-radius: 6px;
+}
+
+/* Drawer (mobile) */
+#drawer {
+  position: fixed; inset: 0 0 0 auto; width: min(320px, 86%);
+  background: var(--surface);
+  border-left: 1px solid color-mix(in oklab, var(--muted) 25%, transparent);
+  box-shadow: var(--shadow); padding: 18px; z-index: 100;
+}
+.drawer-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.drawer-links { display: grid; gap: 10px; }
+
+/* Reveal animation */
+.reveal {
+  opacity: 0; transform: translateY(16px);
+  transition: .6s cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
+}
+.reveal.visible { opacity: 1; transform: none; }
+
+/* CTA row */
+.cta-row { margin-top: 16px; display: flex; gap: 10px; }
+
+/* ===============================
+   Responsive
+   =============================== */
+@media (max-width: 920px) {
+  .hero { grid-template-columns: 1fr; }
+  .row { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: repeat(12, 1fr); }
+  .card { grid-column: span 12; }
+  .links { display: none; }          /* Hide desktop nav on mobile */
+  .menu-btn { display: inline-flex; } /* Show mobile menu trigger */
+}
+
+/* ===============================
+   Accessibility helpers
+   =============================== */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
