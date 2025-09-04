@@ -100,7 +100,7 @@ const coursework = [
   {
     title: 'Data Structures and Algorithms',
     desc: 'Covered arrays, linked lists, stacks, queues, hash maps, trees, and graphs. Implemented sorting, searching, and traversal algorithms while analyzing complexity and problem-solving strategies.',
-    tech: ['Python', 'Java', 'C++', 'Arrays', 'Linked Lists', 'Trees', 'Graphs', 'Hash Maps', 'Algorithms']
+    tech: ['Arrays', 'Linked Lists', 'Trees', 'Graphs', 'Hash Maps', 'Algorithms']
   },
   {
     title: 'Principles of Software Development',
