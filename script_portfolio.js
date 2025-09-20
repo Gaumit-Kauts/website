@@ -51,8 +51,7 @@ drawer && drawer.addEventListener('click', (e) => {
 // 3) Resume: open your hosted PDF
 // ==============================
 
-// Put your real file path here if hosting locally (e.g., '/assets/resume.pdf')
-const resumeUrl = 'https://drive.google.com/file/d/1RykcDERmNFAq_len-LcWDOMNsiLPxLSn/view?usp=drive_link';
+const resumeUrl = 'https://drive.google.com/file/d/1RykcDERmNFAq_len-LcWDOMNsiLPxLSn/view?usp=sharing';
 
 const clickResume = () => {
   window.location.href = resumeUrl;
