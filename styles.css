@@ -42,6 +42,18 @@ body {
   color: var(--text);
 }
 
+.fun-facts {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.fun-facts li {
+  margin-bottom: 0.6rem;
+  padding-left: 0.4rem;
+}
+
 /* ===============================
    Layout
    =============================== */

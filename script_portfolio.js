@@ -98,6 +98,11 @@ const projects = [
 
 const coursework = [
   {
+  title: 'Scalable Data Analytics',
+  desc: 'Learning distributed and big-data technologies including Hadoop, PySpark, Airflow, MySQL, NoSQL databases, and data-lake architectures for large-scale data processing and analytics.',
+  tech: ['Hadoop', 'PySpark', 'Airflow', 'MySQL', 'NoSQL', 'Data Lakes']
+},
+  {
     title: 'Data Structures and Algorithms',
     desc: 'Covered arrays, linked lists, stacks, queues, hash maps, trees, and graphs. Implemented sorting, searching, and traversal algorithms while analyzing complexity and problem-solving strategies.',
     tech: ['Arrays', 'Linked Lists', 'Trees', 'Graphs', 'Hash Maps', 'Algorithms']
@@ -132,11 +137,11 @@ const coursework = [
     desc: 'Programmed microcontrollers in Embedded C using PIC16KF. Designed projects demonstrating peripheral control, UART communication, and processor-level functionality.',
     tech: ['Embedded C', 'PIC16KF Microcontroller', 'UART', 'PWM', 'Hardware Debugging']
   },
-  {
-    title: 'Software Project Management',
-    desc: 'Explored Agile, Waterfall, and Scrum methodologies. Applied Microsoft Project for scheduling and tracking, resource allocation, and team collaboration exercises.',
-    tech: ['Agile', 'Scrum', 'Waterfall', 'MS Project', 'Teamwork', 'Resource Management']
-  }
+  // {
+  //   title: 'Software Project Management',
+  //   desc: 'Explored Agile, Waterfall, and Scrum methodologies. Applied Microsoft Project for scheduling and tracking, resource allocation, and team collaboration exercises.',
+  //   tech: ['Agile', 'Scrum', 'Waterfall', 'MS Project', 'Teamwork', 'Resource Management']
+  // }
 ];
 
 
