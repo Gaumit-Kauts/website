@@ -52,7 +52,7 @@ drawer && drawer.addEventListener('click', (e) => {
 // ==============================
 
 // Put your real file path here if hosting locally (e.g., '/assets/resume.pdf')
-const resumeUrl = 'https://drive.google.com/file/d/1OX7nKRLWUqtGp90-Mjfg5EQygs-IvxRj/view?usp=drive_link';
+const resumeUrl = 'https://drive.google.com/file/d/1RykcDERmNFAq_len-LcWDOMNsiLPxLSn/view?usp=drive_link';
 
 const clickResume = () => {
   window.location.href = resumeUrl;
