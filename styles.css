@@ -196,7 +196,7 @@ section { padding: 60px 0; }
 .thumb img{
   width: 10%;
   height: 10%;
-  object-fit: cover;   /* fills 16:9 nicely; change to contain for logo-like images */
+  object-fit: cover;   
   display: block;
 }
 
